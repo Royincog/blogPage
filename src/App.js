@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Grommet,Box } from 'grommet';
+import BlogPageHeader from './components/BlogPageHeader/BlogPageHeader';
+import { Helmet } from 'react-helmet';
+const theme = {
+  global: {
+    colors:{
+    control: "lime-green",
+    text: "off-white",
+    "off-white": "#FFFFF0",
+    "background-back": "royal-blue",
+    "lime-green": "#ABC123",
+    "royal-blue": "#123ABC",
+    },
+    font: {
+      family: 'Roboto',
+      size: '18px',
+      height: '20px',
+      color : '#333'
+    },
+  },
+};
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Grommet theme={theme}>
+       <head>
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+       <Helmet>
+       <title>Damaged !!</title>
+       </Helmet>
+       </head>
+       <Box align="center">
+        <BlogPageHeader></BlogPageHeader>
+        <h4>Hello World</h4>
+        </Box>
+      </Grommet>
   );
 }
 
