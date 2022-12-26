@@ -6,7 +6,7 @@ class BlogPageHeader extends Component {
     console.log('The page header ', this);
     return (
       <div>
-      <PageHeader title="Errorr 404 Zone !! "
+      <PageHeader title="Errorr 404 Zone !!! "
       subtitle="Blog Post For Crazy People"
       alignSelf='center'>
       </PageHeader>
